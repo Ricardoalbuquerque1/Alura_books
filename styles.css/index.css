@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-body-fundo: #EBECEE;
+    --cor-font-header: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --cor-laranja: #EB9B00;
+    --cor-fundo-header: #FFFFFF;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--cor-body-fundo);
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-fundo-header);
+    position: relative;
+}
+
+.icones {
+    display: flex;
+    align-items: center;
+}
+
+.menu-hamburguer {
+    display: inline-block;
+    height: 2.4em;
+    width: 2.4em;
+    background: url(../img/Menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0.8em;
+    cursor: pointer;
+}
+
+.cont-img {
+    padding: 1em;
+}
+
+.burguer-ul, .burguer-botao  {
+    display: none;
+}
+
+.burguer-botao:checked~.burguer-ul {
+    display: block;
+    
+}
+
+.burguer-botao:checked~.menu-hamburguer {
+    background: url(../img/MenuAberto.png);
+    background: var(--cor-font-header);
+}
+
+.burguer-ul {
+    position: absolute;
+    top: 100%;
+    background-color: var(--cor-fundo-header);
+    width: 65vw;
+    list-style-type: none;
+}
+
+.burguer-ul li {
+    padding: .8em;
+}
+
+.links-titulo {
+    color: var(--cor-laranja);
+    font-weight: 700;
+}
+
+.links {
+    text-decoration: none;
+    background: var(--cor-font-header);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 2em;
+    background: var(--cor-font-header);
+    color: var(--cor-fundo-header);
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.banner p {
+    font-weight: 500;
+}
+
+.place {
+    background-color: transparent;
+    border: 2px solid var(--cor-fundo-header);
+    border-radius: 24px;
+    padding: 1em 1.5em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.place::placeholder {
+    font-family:'Poppins', sans-serif;
+    font-weight: 400;
+    background: url(../img/Pesquisa.png);
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    background-position:1em;
+    text-align: center;
+}
+
+.carrosel h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--cor-laranja);
+    text-transform: uppercase;
+    background-color: var(--cor-fundo-header);
+    padding: 1em 0 0.5em 0;
+    margin-bottom: 1em;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    display: none;
+}
+
+.card {
+    background-color: var(--cor-fundo-header);
+    margin: 1em;
+    padding: 1em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.descricao {
+    margin: 0 0.4em;
+}
+
+.box1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}
+
+.box1 h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cor-laranja);
+}
+ 
+.box1 h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #002F52;
+    margin: .3em 0;
+}
+
+.box1 p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+.box2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    gap: 2em;
+}
+
+.saiba a {
+    background-color: var(--cor-laranja);
+    color: var(--cor-fundo-header);
+    padding: 1em 2.3em;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.saiba a:hover {
+    background-color: #f3ac1f;
+}
+
+.topicos {
+    background: var(--cor-font-header);
+}
+
+.topicos h5 {
+    text-align: center;
+    padding-top: 1em;
+    color: var(--cor-fundo-header);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.links-topicos {
+  display: flex;  
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+  
+}
+
+.links-topicos a {
+    background-color: var(--cor-laranja);
+    color: var(--cor-fundo-header);
+    padding: .5em 1.3em;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo-header);
+    gap: 1em;
+    padding: 1.1em;
+}
+
+footer h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #002F52;
+}
+
+footer p {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.email {
+    border: 1px solid #002F52;
+    border-radius: 2.4rem;
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 1em;
+}
+
+.email::placeholder {
+    padding: 1em 3em;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #002F52;
+    background: url(../img/Email.svg);
+    background-repeat: no-repeat;
+    background-position: 1em;
+}
+
+.icone-titulo, .nav, .tablet, .botao-tablet {
+    display: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .icone-titulo {
+        display: inline-block;
+        font-size: 3.0rem;
+        font-family: 'Josefin Sans', sans-serif; 
+        font-weight: 400;
+    }
+
+    .icone-titulo strong {
+        font-weight: 700;
+    }
+
+    .menu-hamburguer, .favoritos {
+        display: none;
+    }
+
+    .nav {
+        display: flex;  
+    }
+
+    .ul-principal {
+        display: flex;
+        list-style-type: none;
+       
+    }
+    
+    .li-tablet{
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+    
+    .link-tablet {
+        text-decoration: none;
+        color:#000000;
+        
+    }
+
+    .li-tablet {
+        padding: 1.8em 1em;
+    }
+
+    .botao-tablet:checked ~ .burguer-ul {
+        display: block;
+    }
+
+
+    .burguer-ul {
+        width: auto;
+    }
+
+    .banner {
+        text-align: center;
+    }
+
+    .banner h2 {
+        font-size: 3.5rem;
+    }
+
+    .banner p {
+        font-size: 1.6rem;
+    }
+
+    .place {
+        width: 50%;
+        padding: 1.3em 0;
+    }
+
+    .place::placeholder {
+        background-position: 8.3em;
+    }
+
+    .carrosel h2 {
+        margin: 0 auto 1em;
+        width: 70%;
+        border-radius: 0 0 10px 10px;
+        font-size: 2.6rem;
+        padding: 1.3em 0 0 0.5;
+    }
+
+    .swiper {
+        width: 60%;
+    }
+
+    .card {
+        margin: 1.5em auto;
+        width: 50%;
+    }
+
+    .links-topicos  {
+        padding-bottom: 2em;
+    }
+
+    footer {
+        align-items: center;
+    }
+
+    .topicos h5 {
+        font-size: 2rem;
+    }
+
+    .email {
+        width: 60%;
+        text-align: center;
+    }
+
+    .email::placeholder {
+        background-position: 13.8em;
+    }
+
+}
+
+@media screen and ( min-width: 1728px) {
+    .swiper {
+        width: 50%;
+    }
+
+    .place::placeholder {
+        background-position: 18em;
+        font-size: 1.5rem;
+    }
+
+    .link-tablet, .li-tablet {
+        font-size: 1.8rem;
+        font-weight: 400;}
+
+    .card p {
+        font-size: 1.6rem;
+     }
+
+    .card h3 {
+        font-size: 2.8rem;
+    }
+
+    .card h4 {
+        font-size: 1.8rem;
+    }
+
+    .links-topicos {
+        font-size: 2rem;
+        padding: 1em 1.5em;
+    }
+
+    .email::placeholder {
+        background-position: 27em;
+        font-size: 1.6rem; 
+    }
+
+    footer h2 {
+        font-size: 2rem;
+    }
+    
+    footer p{
+        font-size: 1.8rem;
+    }
+}
